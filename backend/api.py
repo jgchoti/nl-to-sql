@@ -236,9 +236,7 @@ def cleanup_sessions():
         
         for sid in expired:
             try:
-                # Clean up both database connections
                 sessions[sid]["db"].engine.dispose()
-                # LangChain SQLDatabase cleanup
                 if hasattr(sessions[sid]["langchain_db"], '_engine'):
                     sessions[sid]["langchain_db"]._engine.dispose()
                 logger.info(f"Cleaned up expired session: {sid}")
