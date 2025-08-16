@@ -200,15 +200,7 @@ function App() {
 
                     {result.results && result.results.length > 0 && (
                         <>
-                            <Box display="flex" justifyContent="flex-end" mb={1}>
-                                <Button
-                                    variant="outlined"
-                                    size="small"
-                                    onClick={() => downloadCSV(result.results, databaseName)}
-                                >
-                                    Download CSV
-                                </Button>
-                            </Box>
+
 
                             <Typography variant="subtitle2" color="text.secondary" sx={{ mt: 2, mb: 1 }}>
                                 Query Results ({result.row_count} rows):
@@ -249,7 +241,17 @@ function App() {
                                     </tbody>
                                 </Box>
                             </Paper>
+                            <Box display="flex" justifyContent="flex-end" mt={1}>
+                                <Button
+                                    variant="outlined"
+                                    size="small"
+                                    onClick={() => downloadCSV(result.results, databaseName)}
+                                >
+                                    Download CSV
+                                </Button>
+                            </Box>
                         </>
+
                     )}
 
                     {result.answer && (
