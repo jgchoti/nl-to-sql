@@ -122,7 +122,7 @@ function App() {
             setIsLoading(true);
             setError('');
 
-            const response = await axios.post(`${API_BASE_URL}/api/get-query`, {
+            const response = await axios.post(`${API_BASE_URL}/get-query`, {
                 session_id: sessionId,
                 question: question.trim()
             });
@@ -150,7 +150,7 @@ function App() {
             setIsLoading(true);
             setError('');
 
-            const response = await axios.post(`${API_BASE_URL}/api/get-query`, {
+            const response = await axios.post(`${API_BASE_URL}/get-query`, {
                 session_id: sessionId,
                 question: testQuestion
             });
