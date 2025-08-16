@@ -79,10 +79,10 @@ def upload_file():
 
         session_id = str(uuid.uuid4())
         sessions[session_id] = {
-            "db": db, 
+            "db": db,
             "langchain_db": langchain_db,
-            "last_used": time.time()
-        }
+            "last_used": time.time(),
+            }
 
         logger.info(f"File uploaded successfully, session: {session_id}")
         return jsonify({"session_id": session_id})
