@@ -10,7 +10,10 @@ from sql_assistant import SQLAssistApp
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=[
+    "http://localhost:3000",
+    "https://sql-assist.vercel.app/"
+])  
 
 sessions = {}  # { session_id: { "conn": sqlite_conn, "last_used": ts } }
 
