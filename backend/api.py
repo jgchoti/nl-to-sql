@@ -172,8 +172,8 @@ def process_query():
             result = sql_assistant.query_structured(user_question)
             
 
-            if result.result is not None and not result.result.empty:
-                results_data = result.result.to_dict('records')
+            if result.get('result') is not None and not result['result'].empty:
+                results_data = result['result'].to_dict('records')
             else:
                 results_data = []
             
