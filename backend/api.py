@@ -178,17 +178,15 @@ def process_query():
                 results_data = []
             
             logger.info(f"Query processed successfully. Found {len(results_data)} results")
-            
             return jsonify({
-                'success': True,
-                'result': {
-                    'question': result.question,
-                    'sql_query': result.sql_query,
-                    'results': results_data,
-                    'answer': result.answer,
-                    'row_count': result.row_count
-                }
-            })
+                "success": True,
+                "result": {
+                    "question": result.get("question"),
+                    "sql_query": result.get("sql_query"),
+                    "results": results_data,
+                    "answer": result.get("answer"),
+                    "row_count": result.get("row_count"),
+                    }})
             
         except Exception as e:
             logger.error(f"SQLAssistApp error: {e}")

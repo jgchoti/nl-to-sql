@@ -176,7 +176,7 @@ function App() {
             <Card sx={{ mt: 3, mb: 3 }}>
                 <CardContent>
                     <Typography variant="h6" gutterBottom>
-                        Results for: {result.question}
+                        Results for: {result?.question}
                     </Typography>
 
                     {result.sql_query && (
