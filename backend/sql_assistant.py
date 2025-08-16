@@ -124,15 +124,19 @@ class SQLAssistApp:
     def generate_answer(self, state: State):
         try:
             prompt = (
-    "Given the following user question, SQL query, and SQL result, "
-    "provide a concise, well-formatted answer in Markdown with:\n"
-    "- Bold key values\n"
-    "- Numbered lists for rankings\n"
-    "- Optional insights highlighted with emojis or symbols\n\n"
+    "You are a data analyst AI. Given the following user question, SQL query, "
+    "and SQL result, provide a concise, insightful analysis in Markdown.\n\n"
+    "Your answer should include:\n"
+    "- Key numbers in **bold**\n"
+    "- Rankings or top-N items as numbered lists\n"
+    "- Observations, trends, or comparisons (e.g., which values are unusually high/low, patterns, or anomalies)\n"
+    "- Optional emojis to highlight key insights\n"
+    "- A short actionable takeaway or recommendation if relevant\n\n"
     f"Question: {state['question']}\n"
     f"SQL Query: {state['query']}\n"
     f"SQL Result: {state['result']}"
 )
+
             response = self.llm.invoke(prompt)
             return {"answer": response.content}
         except Exception as e:

@@ -23,6 +23,7 @@ import {
     CloudUpload as UploadIcon
 } from '@mui/icons-material';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 const API_BASE_URL = 'https://nl-to-sql-dhbf.onrender.com/api';
 
@@ -260,7 +261,7 @@ function App() {
                                 AI Answer:
                             </Typography>
                             <Paper sx={{ p: 2, bgcolor: 'primary.50', border: '1px solid', borderColor: 'primary.200' }}>
-                                <Typography>{result.answer}</Typography>
+                                <ReactMarkdown>{result.answer}</ReactMarkdown>
                             </Paper>
                         </>
                     )}
