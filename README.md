@@ -69,8 +69,6 @@ npm install
 
 ## Running the Application
 
-### Option 1: Web Interface (Recommended)
-
 1. **Start the Backend API Server:**
 
    ```bash
@@ -87,14 +85,6 @@ npm install
    ```
 
 3. **Open your browser** and navigate to `http://localhost:3000`
-
-### Option 2: Command Line Interface
-
-```bash
-cd backend
-source env/bin/activate
-python -m main
-```
 
 ## API Endpoints
 
