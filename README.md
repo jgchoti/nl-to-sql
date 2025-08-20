@@ -70,8 +70,6 @@ npm install
 
 ## Running the Application
 
-### Option 1: Web Interface (Recommended)
-
 1. **Start the Backend API Server:**
 
    ```bash
