@@ -1,6 +1,8 @@
 # SQL Assistant
 
-A natural language to SQL query converter with a modern web interface.
+A natural language to SQL query converter with a web interface.
+
+![web](screenshots/web.png)
 
 ## Project Structure
 
@@ -19,8 +21,7 @@ sql-assist/
 ├── frontend/               # React frontend
 │   ├── public/
 │   ├── src/
-│   ├── package.json
-│   └── README.md
+│   └──package.json
 └── README.md               # This file
 ```
 
@@ -88,14 +89,6 @@ npm install
 
 3. **Open your browser** and navigate to `http://localhost:3000`
 
-### Option 2: Command Line Interface
-
-```bash
-cd backend
-source env/bin/activate
-python -m main
-```
-
 ## API Endpoints
 
 - `POST /api/init` - Initialize database connection
@@ -117,9 +110,7 @@ python -m main
 
 The application automatically detects and supports:
 
-- **Chinook**: Music store database with artists, albums, tracks, etc.
-- **Sakila**: Film rental database with movies, customers, rentals, etc.
-- **General**: Any SQLite database with automatic table detection
+- SQLite databases (e.g., Chinook, Sakila)
 
 ## Configuration
 
@@ -162,19 +153,6 @@ In `backend/sql_assistant.py`, you can modify:
 2. **API connection failed**: Check if backend server is running on port 5000
 3. **Gemini API errors**: Verify your API key is correct and has sufficient quota
 4. **Frontend build errors**: Clear `node_modules` and reinstall dependencies
-
-### Logs
-
-- Backend logs appear in the terminal running the Flask server
-- Frontend logs appear in the browser console (F12)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## License
 
