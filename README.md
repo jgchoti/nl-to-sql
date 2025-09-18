@@ -152,6 +152,3 @@ In `backend/sql_assistant.py`, you can modify:
 3. **Gemini API errors**: Verify your API key is correct and has sufficient quota
 4. **Frontend build errors**: Clear `node_modules` and reinstall dependencies
 
-## License
-
-This project is open source and available under the MIT License.
