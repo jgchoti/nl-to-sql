@@ -152,3 +152,5 @@ In `backend/sql_assistant.py`, you can modify:
 3. **Gemini API errors**: Verify your API key is correct and has sufficient quota
 4. **Frontend build errors**: Clear `node_modules` and reinstall dependencies
 
+---
+Demo: [nl-to-sql-pied.vercel.app](https://sql-assist.vercel.app/)
